@@ -8,9 +8,9 @@ Park.prototype = {
   addDinosaur: function(dinosaur) {
     this.dinosaurs.push(dinosaur);
   },
-  removeByType: function(dinosaurType) {
+  removeByType: function(dinosaur) {
    for (var i = this.dinosaurs.length - 1; i >= 0; i--) {
-     if (this.dinosaurs[i].type === dinosaurType.type) {
+     if (this.dinosaurs[i].type === dinosaur.type) {
        this.dinosaurs.splice(i, 1);
      }
    }
