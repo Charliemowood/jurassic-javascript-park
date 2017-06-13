@@ -9,9 +9,9 @@ describe('Dinosaur', function() {
 
 
   beforeEach(function() {
-    dino1 = new Dinosaur({type: "tyrannosaurus"});
-    dino2 = new Dinosaur({type: "velociraptor"});
-    dino3 = new Dinosaur({type: "triceratops"});
+    dino1 = new Dinosaur({type: "tyrannosaurus", offspring: 1});
+    dino2 = new Dinosaur({type: "velociraptor", offspring: 2});
+    dino3 = new Dinosaur({type: "triceratops", offspring: 3});
   });
 
 
@@ -26,5 +26,15 @@ describe('Dinosaur', function() {
   it('can get back triceratops from dinosaur', function() {
     assert.strictEqual("triceratops", dino3.type);
   });
+
+  it('can get back offspringPerYear from dinosaur', function() {
+    assert.strictEqual(3, dino3.offspringPerYear);
+  });
+
+  it('can get back offspringPerYear from velociraptor', function() {
+    assert.strictEqual(2, dino2.offspringPerYear);
+  });
+
+
 
 });
